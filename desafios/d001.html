@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brasileiro ou Estrangeiro?</title>
+</head>
+<body>
+    <h1>Vamos verificar se você é Brasileiro ou Estrangeiro?</h1>
+
+    Em que País você nasceu? <input type="text" name="pais" id="pais">
+    <input type="button" value="Enviar" onclick="testar()">
+    <div id="res">
+
+    </div>
+
+    <script>
+        function testar() {
+            var p = document.getElementById('pais')
+            var pais = (p.value)
+            var res = document.getElementById('res')
+            res.innerHTML = `<p>O País que você nasceu é ${pais}</p>`
+
+            if (pais != 'Brasil') {
+                res.innerHTML += 'Você não é Brasileiro'
+            }else {
+                res.innerHTML += 'Você é Brasileiro'
+            }
+        }
+    </script>
+</body>
+</html>
